@@ -6,24 +6,27 @@
     --box-shadow-color: black;
     --box-shadow-combined: var(--box-shadow-Xoffset) var(--box-shadow-Yoffset) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
 
-    --margin-sides: 100px;
-
+    --margin-sides: 320px;
+    --margin-top-bottm: 50px;
 }
 
 * {
-    background-color: rgb(255, 251, 239);
     outline: 1px solid red;
     margin:0px;
 }
 
 @import 'styles/header.css';
 @import 'styles/main.css';
+@import 'styles/footer.css';
 
 .image{
     height: 200px;
 }
 .image.small{
     height: 75px;
+}
+.image.big{
+    height: 400px;
 }
 
 

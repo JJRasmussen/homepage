@@ -8,11 +8,14 @@
     --project-card-button-size: 50px;
 }
 
+main{
+    background-color: rgb(255, 251, 239);
+    padding: var(--margin-top-bottm) var(--margin-sides)
+}
+
 .projectSection{
     display:grid;
     grid-template-rows:50px 1fr;
-    margin: 50px var(--margin-sides);
-
 }
 
 .projectHeadline{
