@@ -1,0 +1,57 @@
+:root{
+    --project-card-size: 300px;
+
+    --project-header-height: 50px;
+    --project-header-padding: 8px;
+    --project-header-size: calc(var(--project-header-height) + (var(--project-header-padding))*2);
+
+    --project-card-button-size: 50px;
+}
+
+.projectSection{
+    display:grid;
+    grid-template-rows:50px 1fr;
+    margin: 50px var(--margin-sides);
+
+}
+
+.projectHeadline{
+    grid-area: 1/1/2/2;
+}
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, var(--project-card-size));
+    align-items: center;
+    justify-content: space-around;
+}
+.projectCard{
+    box-shadow: var(--box-shadow-combined);
+    display: grid;
+    height: var(--project-card-size);
+    grid-template-rows: 2fr var(--project-header-size) 1fr;
+}
+
+.projectImage{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow:hidden;
+}
+.projectCardUpper{
+    display: grid;
+    grid-template-columns: 1fr var(--project-card-button-size) var(--project-card-button-size);
+    gap: 16px;
+    padding: var(--project-header-padding);
+}
+
+.projectName{
+    line-height: var(--project-header-height);
+}
+
+.cardButton.small{
+
+}
+
+.projectDescription{
+
+}
