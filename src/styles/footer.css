@@ -1,8 +1,6 @@
 :root{
-    --background-color-footer: teal;
-
     --contact-me-height: 50px; 
-    --iconSize: 20px;
+    --iconSize: 22px;
 
     --imageWidth: 100%;
     --imageHeight: 500px;
@@ -10,12 +8,28 @@
 
 footer{
     display: grid;
+    grid-template-rows: 200px 1fr;
+    background-color: var(--header-footer-color);
+}
+
+.footerBorderSVG{
+    grid-area: 1/1/2/2;
+    background-color: var(--background-color);
+}
+
+footer g{
+    fill: var(--header-footer-color);
+}
+
+.footerInformation{
+    grid-area: 1/1/3/2;
+    display: grid;
     grid-template-columns: 1fr 2fr;
-    background-color: var(--background-color-footer);
-    padding: var(--margin-top-bottm) var(--margin-sides);
+    padding: var(--margin-top-bottom) var(--margin-sides);
     height: 500px;
     color: white;
 }
+
 .leftFooter{
     display:grid;
     box-sizing: border-box;
@@ -70,4 +84,5 @@ footer{
     box-sizing: content-box;
     width: var(--imageWidth);
     height: var(--imageHeight);
+    box-shadow: var(--box-shadow-combined);
 }

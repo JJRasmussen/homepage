@@ -7,11 +7,14 @@
     --box-shadow-combined: var(--box-shadow-Xoffset) var(--box-shadow-Yoffset) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
 
     --margin-sides: 320px;
-    --margin-top-bottm: 50px;
+    --margin-top-bottom: 50px;
+
+    --background-color: rgb(255, 251, 239);
+    --header-footer-color: teal;
 }
 
 * {
-    outline: 1px solid red;
+
     margin:0px;
 }
 
