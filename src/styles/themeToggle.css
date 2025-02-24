@@ -1,0 +1,46 @@
+:root{
+    --toggle-button-height: 46px;
+    --toggle-button-width: 96px;
+    --toggle-active-circle-size: calc(var(--toggle-button-height) * 0.8);
+
+    --toggle-button-placement-top:16px;
+    --toggle-button-placement-right: 16px;
+}
+
+.themeToggle{
+    position: fixed;
+    top: var(--toggle-button-placement-top);
+    right: var(--toggle-button-placement-right);
+
+    width: var(--toggle-button-width);
+    height: var(--toggle-button-height);
+    border-radius: calc(var(--toggle-button-height)/2);
+    background-color: var(--toggle-background);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.themeToggle::before{
+    content: '';
+    position: absolute;
+
+    width: var(--toggle-active-circle-size);
+    height: var(--toggle-active-circle-size);
+    border-radius: 50%;
+    background-color: var(--toggle-active-circle-background);
+    z-index:-1;
+    left: 0px;
+    transform: translateX(var(--switch-circle-position));
+}
+
+#themeToggleSun{
+    fill: var(--icon-sun);
+    height: 60%;
+}
+#themeToggleMoon{
+    fill: var(--icon-moon);
+    height: 50%;
+}

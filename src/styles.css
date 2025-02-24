@@ -10,35 +10,29 @@
     --margin-top-bottom: 50px;
 }
 
-:root{
-    --background-color: rgb(255, 251, 239);
-    --header-footer-color: teal;
-    --text-color: black;
-    --theme-name: "light"
-}
-
-@media (prefers-color-scheme: dark)
-{
-    :root {
-        --background-color: rgb(32, 32, 32);
-        --header-footer-color: rgb(0, 0, 105);
-        --text-color: white;
-        --theme-name: "dark";
-    }
-}
-
 :root.light{
     --background-color: rgb(255, 251, 239);
     --header-footer-color: teal;
     --text-color: black;
+
+    --toggle-background: #F5F5F6;
+    --toggle-active-circle-background: #FFD371;
+    --switch-circle-position: 8px;
+    --icon-sun: #997F44;
+    --icon-moon: #B1B0B5;
+
 }
 
 :root.dark{
     --background-color: rgb(32, 32, 32);
     --header-footer-color: rgb(0, 0, 105);
-    --text-color: white
+    --text-color: white;
+    --toggle-background: #F5F5F6;
+    --toggle-active-circle-background: #55524d;
+    --switch-circle-position: 52px;
+    --icon-sun: #997F44;
+    --icon-moon: #B1B0B5;
 }
-
 
 * {
     margin:0px;
@@ -47,6 +41,7 @@
 @import 'styles/header.css';
 @import 'styles/main.css';
 @import 'styles/footer.css';
+@import 'styles/themeToggle.css';
 
 
 .image{
