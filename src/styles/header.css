@@ -1,7 +1,9 @@
 header{
+    position:relative;
     display: grid;
     grid-template-rows: 1fr 180px;
     background-color: var(--header-footer-color);
+    color: var(--text-color);
 }
 
 .headerBorderSVG{
@@ -77,4 +79,10 @@ header g{
     gap: 12px;
     margin-right:12px;
     background:inherit;
+}
+
+.themeToggle{
+    position: fixed;
+    top: 16px;
+    right: 16px;
 }
