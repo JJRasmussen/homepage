@@ -1,9 +1,25 @@
-setTheme = () => {
-    const root = document.documentElement;
-    const newTheme = root.className === 'dark' ? 'light' : 'dark';
-    root.className = newTheme;
+getThemePreference = () => {
+    const lightThemePrefered = window.matchMedia('(prefers-color-scheme: light');
+    if (lightThemePrefered.matches){
+        return 'light'
+    } else {
+        return 'dark'
+    }
+}
 
-    document.querySelector('.themeToggle').textContent = newTheme
+const themePreference = getThemePreference()
+const themeToggleButton = document.querySelector('.themeToggle')
+const toggleButtonText = themePreference === 'dark' ? 'light' : 'dark'
+themeToggleButton.textContent = "click to toggle " + toggleButtonText + " mode"
+const root = document.documentElement;
+root.className = themePreference
+
+setTheme = () => {
+    const oldTheme = root.className
+    const newTheme = oldTheme === 'dark' ? 'light' : 'dark';
+    root.className = newTheme;
+ 
+    document.querySelector('.themeToggle').textContent = "click to toggle " + oldTheme + " mode"
 }
 
 document.querySelector('.themeToggle').addEventListener('click', setTheme)
