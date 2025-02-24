@@ -8,13 +8,14 @@
 
 footer{
     display: grid;
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: 2fr 1fr;
     background-color: var(--header-footer-color);
 }
 
 .footerBorderSVG{
     grid-area: 1/1/2/2;
     background-color: var(--background-color);
+    align-self: start;
 }
 
 footer g{
@@ -26,14 +27,13 @@ footer g{
     display: grid;
     grid-template-columns: 1fr 2fr;
     padding: var(--margin-top-bottom) var(--margin-sides);
-    height: 500px;
     color: white;
 }
 
 .leftFooter{
     display:grid;
     box-sizing: border-box;
-    grid-template-rows: var(--contact-me-height) 1fr 64px 64px 64px 100px
+    grid-template-rows: var(--contact-me-height) 1fr 48px 48px 48px 50px
 }
 .footerTitle{
     grid-row: 1/2; 

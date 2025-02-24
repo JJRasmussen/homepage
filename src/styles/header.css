@@ -1,7 +1,7 @@
 header{
     position:relative;
     display: grid;
-    grid-template-rows: 1fr 180px;
+    grid-template-rows: 1fr 2fr;
     background-color: var(--header-footer-color);
     color: var(--text-color);
 }
@@ -9,6 +9,7 @@ header{
 .headerBorderSVG{
     grid-area: 2/1/3/2;
     background-color: var(--background-color);
+    align-self: end;
 }
 
 header g{
@@ -20,7 +21,7 @@ header g{
     display: grid;
     grid-template-columns: 260px 3fr;
     grid-template-rows: 50px 300px 50px;
-    padding: var(--margin-top-bottom) var(--margin-sides);
+    padding:  var(--margin-top-bottom) var(--margin-sides);
 }
 .leftHeader{
     grid-area: 1/1/4/2;
