@@ -10,7 +10,7 @@
 
 main{
     background-color: var(--background-color);
-    padding: var(--margin-top-bottom) var(--margin-sides);
+    padding: var(--padding-top-bottom) var(--padding-sides);
     color: var(--text-color);
     transition: background-color var(--default-transition-time) ease-in-out,
                 color var(--default-transition-time) ease-in-out;

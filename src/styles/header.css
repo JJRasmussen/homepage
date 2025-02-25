@@ -24,7 +24,7 @@ header{
     display: grid;
     grid-template-columns: 260px 3fr;
     grid-template-rows: 50px 300px 50px;
-    padding:  var(--margin-top-bottom) var(--margin-sides);
+    padding:  var(--padding-top-bottom) var(--padding-sides);
 }
 
 .leftHeader{

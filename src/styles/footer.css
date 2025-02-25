@@ -29,7 +29,7 @@ footer{
     grid-area: 1/1/3/2;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    padding: var(--margin-top-bottom) var(--margin-sides);
+    padding: var(--padding-top-bottom) var(--padding-sides);
     color: white;
 }
 

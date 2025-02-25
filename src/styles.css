@@ -6,10 +6,26 @@
     --box-shadow-color: black;
     --box-shadow-combined: var(--box-shadow-Xoffset) var(--box-shadow-Yoffset) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
 
-    --margin-sides: 320px;
-    --margin-top-bottom: 50px;
+    --padding-sides: clamp(160px, calc(5% + 100px), 280px);
+    --padding-top-bottom: 50px;
 
     --default-transition-time: .3s;
+}
+
+@media (max-width: 1000px){
+    :root{
+        --padding-sides:clamp(28px, 5%, 160px);
+        --padding-top-bottom:50px;
+        transition: padding var(--default-transition-time) ease-in-out;
+    }
+}
+
+@media (max-width: 600px){
+    :root{
+        --padding-sides: 28px;
+        --padding-top-bottom:28px;
+        transition: padding var(--default-transition-time) ease-in-out;
+    }
 }
 
 :root.light{
