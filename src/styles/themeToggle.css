@@ -37,7 +37,7 @@
     z-index:-1;
     left: 0px;
     transform: translateX(var(--switch-circle-position));
-    transition: var(--default-transition);
+    transition: transform var(--default-transition-time) ease-in-out;
 }
 
 #themeToggleSun{

@@ -9,7 +9,7 @@
     --margin-sides: 320px;
     --margin-top-bottom: 50px;
 
-    --default-transition-time: 1s;
+    --default-transition-time: .3s;
 }
 
 :root.light{
