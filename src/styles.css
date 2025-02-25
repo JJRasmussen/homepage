@@ -9,12 +9,7 @@
     --margin-sides: 320px;
     --margin-top-bottom: 50px;
 
-    --default-transition-time: .3s;
-    --default-transition:   color var(--default-transition-time) ease-in-out,
-                            background-color var(--default-transition-time) ease-in-out,
-                            border-color var(--default-transition-time) ease-in-out,
-                            fill var(--default-transition-time) ease-in-out,
-                            transform var(--default-transition-time) ease-in-out;
+    --default-transition-time: 1s;
 }
 
 :root.light{
@@ -52,15 +47,3 @@
 button{
     cursor: pointer;
 }
-
-.image{
-    height: 200px;
-}
-.image.small{
-    height: 75px;
-}
-.image.big{
-    height: 400px;
-}
-
-

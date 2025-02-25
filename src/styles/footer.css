@@ -10,19 +10,19 @@ footer{
     display: grid;
     grid-template-rows: 2fr 1fr;
     background-color: var(--header-footer-color);
-    transition: var(--default-transition)
+    transition: background-color var(--default-transition-time) ease-in-out;
 }
 
 .footerBorderSVG{
     grid-area: 1/1/2/2;
     background-color: var(--background-color);
     align-self: start;
-    transition: var(--default-transition)
+    transition: background-color var(--default-transition-time) ease-in-out;
 }
 
 .footerBorderSVGPath{
     fill: var(--header-footer-color);
-    transition: var(--default-transition)
+    transition: fill var(--default-transition-time) ease-in-out;
 }
 
 .footerInformation{

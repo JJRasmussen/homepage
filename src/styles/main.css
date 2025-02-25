@@ -12,7 +12,8 @@ main{
     background-color: var(--background-color);
     padding: var(--margin-top-bottom) var(--margin-sides);
     color: var(--text-color);
-    transition: var(--default-transition)
+    transition: background-color var(--default-transition-time) ease-in-out,
+                color var(--default-transition-time) ease-in-out;
 }
 
 .projectSection{
