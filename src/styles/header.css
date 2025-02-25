@@ -14,7 +14,7 @@ header{
     transition: var(--default-transition)
 }
 
-header g{
+.headerBorderSVGPaths{
     fill: var(--header-footer-color);
     transition: var(--default-transition)
 }
@@ -83,4 +83,11 @@ header g{
     gap: 12px;
     margin-right:12px;
     background:inherit;
+}
+.linkContainer{
+    grid-row: 6/7;
+    display: grid;
+    grid-template-columns: 52px 52px;
+    grid-template-rows: 52px 52px;
+    gap:12px;
 }

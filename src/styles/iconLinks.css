@@ -1,0 +1,12 @@
+.iconLink{
+    height: 32px;
+    width: 32px;
+}
+.iconLink.infoCardLink{
+    fill: var(--text-color);
+    transition: var(--default-transition);
+}
+
+.iconLink.footerLink{
+    fill: white;
+}
