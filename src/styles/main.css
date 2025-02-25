@@ -12,6 +12,7 @@ main{
     background-color: var(--background-color);
     padding: var(--margin-top-bottom) var(--margin-sides);
     color: var(--text-color);
+    transition: var(--default-transition)
 }
 
 .projectSection{

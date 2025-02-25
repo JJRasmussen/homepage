@@ -8,30 +8,35 @@
 
     --margin-sides: 320px;
     --margin-top-bottom: 50px;
+
+    --default-transition-time: .3s;
+    --default-transition:   color var(--default-transition-time) ease-in-out,
+                            background-color var(--default-transition-time) ease-in-out,
+                            border-color var(--default-transition-time) ease-in-out,
+                            fill var(--default-transition-time) ease-in-out,
+                            transform var(--default-transition-time) ease-in-out;
 }
 
 :root.light{
     --background-color: rgb(255, 251, 239);
     --header-footer-color: teal;
     --text-color: black;
-
     --toggle-background: #F5F5F6;
     --toggle-active-circle-background: #FFD371;
     --switch-circle-position: 8px;
-    --icon-sun: #997F44;
+    --icon-sun: #cea64a;
     --icon-moon: #B1B0B5;
-
 }
 
 :root.dark{
     --background-color: rgb(32, 32, 32);
     --header-footer-color: rgb(0, 0, 105);
     --text-color: white;
-    --toggle-background: #F5F5F6;
-    --toggle-active-circle-background: #55524d;
-    --switch-circle-position: 52px;
-    --icon-sun: #997F44;
-    --icon-moon: #B1B0B5;
+    --toggle-background: #929292;
+    --toggle-active-circle-background: #7190FF;
+    --switch-circle-position: 50px;
+    --icon-sun: #5c5649;
+    --icon-moon: #DCE3FF;
 }
 
 * {

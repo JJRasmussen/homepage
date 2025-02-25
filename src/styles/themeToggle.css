@@ -16,11 +16,14 @@
     height: var(--toggle-button-height);
     border-radius: calc(var(--toggle-button-height)/2);
     background-color: var(--toggle-background);
+    border: none;
 
     display: flex;
     align-items: center;
     justify-content: space-around;
     cursor: pointer;
+
+    transform: var(--default-transition)
 }
 
 .themeToggle::before{
@@ -34,13 +37,16 @@
     z-index:-1;
     left: 0px;
     transform: translateX(var(--switch-circle-position));
+    transition: var(--default-transition);
 }
 
 #themeToggleSun{
     fill: var(--icon-sun);
     height: 60%;
+    transition: var(--default-transition);
 }
 #themeToggleMoon{
     fill: var(--icon-moon);
-    height: 50%;
+    height: 60%;
+    transition: var(--default-transition);
 }

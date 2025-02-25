@@ -4,16 +4,19 @@ header{
     grid-template-rows: 1fr 2fr;
     background-color: var(--header-footer-color);
     color: var(--text-color);
+    transition: var(--default-transition)
 }
 
 .headerBorderSVG{
     grid-area: 2/1/3/2;
     background-color: var(--background-color);
     align-self: end;
+    transition: var(--default-transition)
 }
 
 header g{
-    fill: var(--header-footer-color)
+    fill: var(--header-footer-color);
+    transition: var(--default-transition)
 }
 
 .headerIntroduction{
