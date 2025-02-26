@@ -1,74 +1,62 @@
+:root{
+    --portrait-width: 400px;
+    --portrait-height: calc(var(--portrait-width) * 1.5);
+    
+}
 header{
     position:relative;
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    height:900px;
     background-color: var(--header-footer-color);
     color: var(--text-color);
     transition: background-color var(--default-transition-time) ease-in-out;
 }
-
 .headerBorderSVG{
-    grid-area: 2/1/3/2;
     background-color: var(--background-color);
     align-self: end;
     transition: background-color var(--default-transition-time) ease-in-out;
 }
-
 .headerBorderSVGPaths{
     fill: var(--header-footer-color);
     transition: fill var(--default-transition-time) ease-in-out;
 }
-
 .headerIntroduction{
     grid-area:1/1/3/2;
-    display: grid;
-    grid-template-columns: 260px 3fr;
-    grid-template-rows: 50px 300px 50px;
+    display:grid;
+    grid-template-columns: var(--portrait-width) 1fr;
+    grid-template-rows: 60px calc(var(--portrait-height) - 120px) 60px;
     padding:  var(--padding-top-bottom) var(--padding-sides);
 }
-
-.leftHeader{
+.portraitContainer{
     grid-area: 1/1/4/2;
-    position: relative;
-    text-align: center;
-    color: black;
-    box-shadow: 2px 2px 12px 1px black;
-    z-index:1;
+    position:relative; 
 }
-
 .portrait{
-    height: 400px;
+    position:relative;
+    width:var(--portrait-width);
+    box-shadow: var(--box-shadow-combined);
 }
-.headerName{
-    position: absolute;
-    bottom: 8px;  
-    transform: translate(50%);
-    background: none;
+.portraitName{
+    position:absolute;
+    text-align:center;
+    bottom: 0.8em;  
+    left:50%;
+    transform: translateX(-50%);
     color: white;
+    font-size: 2.4em;
 }
-.rightHeader{
-    grid-area: 1/2/4/3;
-    height: 400px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .infoCard{
-    display:grid;
-    grid-template-columns: 1fr 160px;
-    grid-template-rows: 50px 1fr 50px;
-    height: 300px;
+    grid-area: 2/2/3/3;
+    position:relative;
     background-color: var(--background-color);
     box-shadow: var(--box-shadow-combined);
-    position: relative;
-    z-index: 0;
     transition: background-color var(--default-transition-time) ease-in-out,
                 color var(--default-transition-time) ease-in-out;
 }
-
+.infoCardFloater{
+    display:none;
+}
 .about{
-    grid-area: 1/1/2/3;
     background: inherit;
     margin-left: 28px;
     margin-top: 12px;
@@ -80,6 +68,9 @@ header{
 }
 .buttonHolder{
     grid-area:3/2/4/3;
+    position: absolute;
+    bottom:1.2em;
+    right:1.2em;
     display: flex;
     justify-content:center;
     align-items: center;
@@ -87,10 +78,55 @@ header{
     margin-right:12px;
     background:inherit;
 }
-.linkContainer{
-    grid-row: 6/7;
-    display: grid;
-    grid-template-columns: 52px 52px;
-    grid-template-rows: 52px 52px;
-    gap:12px;
+@media (max-width: 1200px){
+    :root{
+        
+        --portrait-width: 320px;
+        --portrait-height: calc(var(--portrait-width) * 1.5);
+        --portrait-overlap-x: calc(var(--portrait-width) * 0.8);
+        --portrait-overlap-y: calc(var(--portrait-height) * 0.2);
+        --portrait-left-solo-column: calc(var(--portrait-width) - var(--portrait-overlap-x));
+    }
+    .headerIntroduction{
+        grid-template-columns: var(--portrait-left-solo-column) var(--portrait-overlap-x) 1fr;
+        grid-template-rows: var(--portrait-overlap-y) calc(var(--portrait-height) - var(--portrait-overlap-y)) 160px;
+        padding-right: 120px;
+    }
+    .portraitContainer{
+        grid-area: 1/1/3/2;
+        position:relative;
+        z-index:1;
+    }
+    .portraitName{
+        position:absolute;
+        text-wrap: nowrap;
+        top: 0.8em;  
+        transform: translateX(80%);
+        color: white;
+        font-size: 2.4em;
+    }
+    .infoCard{
+        grid-area: 2/2/4/4;
+        display: inline;
+        position:relative;
+        background-color: var(--background-color);
+        z-index:0;
+    }
+    .infoCardFloater{        
+        display:inline;
+        height:calc(var(--portrait-height) - var(--portrait-overlap-y));
+        width:var(--portrait-overlap-x);
+        float:left;
+        margin-right: 1.2em;
+        margin-bottom: 1.2em;
+    }
+    .about{
+        padding-left: 28px;
+    }
+    .infoCardText{
+        margin-left: 12px;
+    }   
+
+}
+@media (max-width: 800px){
 }

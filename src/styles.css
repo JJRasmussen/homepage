@@ -12,19 +12,17 @@
     --default-transition-time: .3s;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1200px){
     :root{
         --padding-sides:clamp(28px, 5%, 160px);
         --padding-top-bottom:50px;
-        transition: padding var(--default-transition-time) ease-in-out;
     }
 }
 
-@media (max-width: 600px){
+@media (max-width: 800px){
     :root{
         --padding-sides: 28px;
         --padding-top-bottom:28px;
-        transition: padding var(--default-transition-time) ease-in-out;
     }
 }
 
@@ -72,6 +70,8 @@ h1 h2 h3{
 
 p{
     font-family: roboto, sans-serif; 
+    font-size: 15px;
+    line-height:1.4
 }
 
 @import 'styles/header.css';
