@@ -4,14 +4,15 @@
     fill: var(--text-color);
     transition: fill var(--default-transition-time) ease-in-out;
 }
-.iconLink.infoCardLink{
+
+@media (max-width: 800px){
+    .iconLink.infoCardLink{
+        fill: white;
+        height: 48px;
+        width: 48px;
+    }
 }
 
 .iconLink.footerLink{
     fill: white;
-}
-
-
-.iconLink.projectCardLink{
-
 }

@@ -6,7 +6,7 @@
 header{
     position:relative;
     display: grid;
-    height:900px;
+    min-height:900px;
     background-color: var(--header-footer-color);
     color: var(--text-color);
     transition: background-color var(--default-transition-time) ease-in-out;
@@ -80,7 +80,6 @@ header{
 }
 @media (max-width: 1200px){
     :root{
-        
         --portrait-width: 320px;
         --portrait-height: calc(var(--portrait-width) * 1.5);
         --portrait-overlap-x: calc(var(--portrait-width) * 0.8);
@@ -129,4 +128,74 @@ header{
 
 }
 @media (max-width: 800px){
+    :root{
+        --portrait-width: 100%;
+        --portrait-height: calc(var(--portrait-width) * 1.5);
+        --portrait-overlap-x: calc(var(--portrait-width) * 0.8);
+        --portrait-overlap-y: calc(var(--portrait-height) * 0.2);
+        --portrait-left-solo-column: calc(var(--portrait-width) - var(--portrait-overlap-x));
+    }
+    .header{
+        min-height: auto;
+    }
+    .headerIntroduction{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        padding: 60px;
+        padding-bottom: 72px;
+        gap: 24px;
+    }
+    .portraitContainer{
+        width: 100%;
+        position:relative;
+    }
+    .portraitName{
+        position:absolute;
+        text-wrap: wrap;
+        top: auto;
+        bottom: 0.8em;
+        color: white;
+        font-size: 4.4em;
+        transform: translateX(-50%);   
+    }
+    .infoCard{
+        display: inline;
+        position:relative;
+        background-color: var(--top-bottom-color);
+        border: none;
+        box-shadow: none;
+        color: white;
+    }
+
+    .infoCard p{
+        font-size: 1.4em;
+    }
+    .infoCardFloater{        
+        display:none
+    }
+    .about{
+        padding: 0px;
+        font-size: 2.8em;
+        padding-bottom: 12px;
+        justify-self: center;
+    }
+    .infoCardText{
+        margin-left: 12px;
+        text-wrap: wrap;
+    } 
+    .buttonHolder{
+        position: absolute;
+        bottom:-3.4em;
+        right:50%;
+        margin-right: 0px;
+        transform: translate(50%);
+        background: var(--top-bottom-color);
+
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        gap: 12px;
+    }
 }

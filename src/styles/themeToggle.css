@@ -23,7 +23,8 @@
     justify-content: space-around;
     cursor: pointer;
 
-    transform: var(--default-transition)
+    transform: var(--default-transition);
+    z-index: 1;
 }
 
 .themeToggle::before{
