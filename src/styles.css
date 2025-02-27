@@ -69,12 +69,12 @@ p{
     line-height:1.4
 }
 
+button{
+    cursor: pointer;
+}
+
 @import 'styles/header.css';
 @import 'styles/main.css';
 @import 'styles/footer.css';
 @import 'styles/themeToggle.css';
 @import 'styles/iconLinks.css';
-
-button{
-    cursor: pointer;
-}
