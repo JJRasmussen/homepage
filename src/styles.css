@@ -11,21 +11,6 @@
 
     --default-transition-time: .3s;
 }
-
-@media (max-width: 1200px){
-    :root{
-        --padding-sides:clamp(28px, 5%, 160px);
-        --padding-top-bottom:50px;
-    }
-}
-
-@media (max-width: 800px){
-    :root{
-        --padding-sides: 28px;
-        --padding-top-bottom:28px;
-    }
-}
-
 :root.light{
     --background-color: rgb(255, 251, 239);
     --header-footer-color: teal;
@@ -36,7 +21,6 @@
     --icon-sun: #cea64a;
     --icon-moon: #B1B0B5;
 }
-
 :root.dark{
     --background-color: rgb(32, 32, 32);
     --header-footer-color: rgb(0, 0, 105);
@@ -47,8 +31,6 @@
     --icon-sun: #5c5649;
     --icon-moon: #DCE3FF;
 }
-
-
 @font-face{
     font-family: playfair-display;
     src: url(./styles/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
@@ -57,8 +39,18 @@
     font-family: roboto;
     src: url(./styles/fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
 }
-
-
+@media (max-width: 1200px){
+    :root{
+        --padding-sides:clamp(28px, 5%, 160px);
+        --padding-top-bottom:50px;
+    }
+}
+@media (max-width: 800px){
+    :root{
+        --padding-sides: 28px;
+        --padding-top-bottom:28px;
+    }
+}
 * {
     margin:0px;
     font-family: playfair-display, sans-serif;
@@ -74,7 +66,6 @@ h1+h2+h3{
 
 p{
     font-family: roboto, sans-serif; 
-    font-size: 15px;
     line-height:1.4
 }
 
