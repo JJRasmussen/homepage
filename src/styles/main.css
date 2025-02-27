@@ -1,5 +1,5 @@
 :root{
-    --project-card-size: 300px;
+    --project-card-size: calc((100vw - 185px) / 4);
 
     --project-header-height: 50px;
     --project-header-padding: 8px;
@@ -7,7 +7,6 @@
 
     --project-card-button-size: 50px;
 }
-
 main{
     background-color: var(--background-color);
     padding: var(--padding-top-bottom) var(--padding-sides);
@@ -15,20 +14,20 @@ main{
     transition: background-color var(--default-transition-time) ease-in-out,
                 color var(--default-transition-time) ease-in-out;
 }
-
 .projectSection{
     display:grid;
     grid-template-rows:50px 1fr;
 }
-
 .projectHeadline{
     grid-area: 1/1/2/2;
 }
 .projects{
     display: grid;
     grid-template-columns: repeat(auto-fit, var(--project-card-size));
+    grid-template-rows: 1fr;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap:3.6em;
 }
 .projectCard{
     box-shadow: var(--box-shadow-combined);
@@ -36,7 +35,6 @@ main{
     height: var(--project-card-size);
     grid-template-rows: 2fr var(--project-header-size) 1fr;
 }
-
 .projectImage{
     height: 100%;
     width: 100%;
@@ -44,12 +42,34 @@ main{
     overflow:hidden;
 }
 .projectCardUpper{
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr var(--project-card-button-size) var(--project-card-button-size);
-    gap: 16px;
+    gap: 8px;
     padding: var(--project-header-padding);
+    align-items: center;
+    justify-content: center;
 }
-
 .projectName{
     line-height: var(--project-header-height);
+    flex-grow:1;
+}
+
+@media (max-width: 1200px){
+    :root{
+        --project-card-size: calc((100vw - 100px) / 3);
+    }
+    .projectSection{
+        grid-template-rows: 80px 1fr;
+    }
+    
+    .projectHeadline{
+        justify-self: center;
+        font-size: 3.2em;
+    }
+}
+
+@media (max-width: 800px){
+    :root{
+        --project-card-size: calc((100vw - var(--padding-sides) * 4));
+    }
 }
