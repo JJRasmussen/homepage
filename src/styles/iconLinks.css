@@ -3,6 +3,12 @@
     width: 32px;
     fill: var(--text-color);
     transition: fill var(--default-transition-time) ease-in-out;
+    transform: scale(100%);
+    
+}
+a svg:hover{
+    transition: transform var(--default-transition-time) ease-in-out;
+    transform: scale(120%);
 }
 
 @media (max-width: 800px){

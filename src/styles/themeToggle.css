@@ -22,9 +22,10 @@
     align-items: center;
     justify-content: space-around;
     cursor: pointer;
-
-    transform: var(--default-transition);
     z-index: 1;
+
+    transform: scale(100%);
+    transition: transform var(--default-transition-time) ease-in-out;
 }
 
 .themeToggle::before{
@@ -50,4 +51,8 @@
     fill: var(--icon-moon);
     height: 60%;
     transition: var(--default-transition);
+}
+
+.themeToggle:hover{
+    transform: scale(110%);
 }
