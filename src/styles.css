@@ -39,13 +39,15 @@
     font-family: roboto;
     src: url(./styles/fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
 }
-@media (max-width: 1200px){
+
+
+@media (max-width: 1250px){
     :root{
         --padding-sides:clamp(28px, 5%, 160px);
         --padding-top-bottom:50px;
     }
 }
-@media (max-width: 800px){
+@media (max-width: 850px){
     :root{
         --padding-sides: 28px;
         --padding-top-bottom:28px;

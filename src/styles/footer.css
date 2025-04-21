@@ -86,7 +86,7 @@ footer{
     box-shadow: var(--box-shadow-combined);
 }
 
-@media (max-width:800px){
+@media (max-width:850px){
     .footerInformation{
         display: flex;
         flex-direction: column;
