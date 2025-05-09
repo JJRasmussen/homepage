@@ -60,6 +60,7 @@ header{
 }
 .about{
     background: inherit;
+    font-size: 2.4em;
     margin-left: 28px;
     margin-top: 12px;
 }
@@ -67,7 +68,7 @@ header{
     grid-area: 2/1/3/3;
     background: inherit;
     margin-left: 12px;
-    font-size: 1.2em;
+    font-size: clamp(1.2em, 1.3vw, 2em);
     text-wrap:balance;
 }
 .buttonHolder{
@@ -128,6 +129,7 @@ header{
     }
     .infoCardText{
         margin-left: 12px;
+        font-size: clamp(1.1em, 1.8vw, 2em);
     }   
     .buttonHolder{
         bottom: 20px;
